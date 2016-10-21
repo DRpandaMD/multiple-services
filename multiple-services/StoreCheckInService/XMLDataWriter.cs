@@ -17,10 +17,10 @@ namespace StoreCheckInService
                 writer.WriteStartDocument();
                 writer.WriteStartElement("Stores");
                 writer.WriteStartElement("Store");
-                writer.WriteElementString("ID", store._id.ToString());
+                //writer.WriteElementString("ID", store._id.ToString());
                 writer.WriteElementString("StoreName", store.storeName);
                 writer.WriteElementString("StoreLocation", store.storeLocation);
-                writer.WriteElementString("HasCheckedIn?", store.hasCheckedIn.ToString());
+                writer.WriteElementString("HasCheckedIn", store.hasCheckedIn.ToString());
                 writer.WriteEndElement();
                 writer.WriteEndElement();
                 writer.WriteEndDocument();

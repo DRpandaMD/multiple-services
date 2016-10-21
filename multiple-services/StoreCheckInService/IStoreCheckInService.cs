@@ -12,8 +12,11 @@ namespace StoreCheckInService
     [ServiceContract]
     public interface IStoreCheckInService
     {
+        [OperationContract]
+        void CheckInToStore(string name, string location);
 
-       
+
+
     }
 
 

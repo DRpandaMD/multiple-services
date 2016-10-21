@@ -13,5 +13,13 @@ namespace StoreCheckInService
     public class _StoreCheckInService : IStoreCheckInService
     {
        
+        public void CheckInToStore(string name, string location)
+        {
+            Store newStore = new Store(name, location);
+            XMLDataWriter writer = new XMLDataWriter();
+            writer.writeToXMLFile(newStore);
+
+
+        }
     }
 }

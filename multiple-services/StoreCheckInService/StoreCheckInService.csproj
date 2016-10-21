@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="Store.cs" />
     <Compile Include="XMLDataWriter.cs" />
+    <Compile Include="XMLSerializer.cs" />
     <Compile Include="_StoreCheckInService.svc.cs">
       <DependentUpon>_StoreCheckInService.svc</DependentUpon>
     </Compile>
