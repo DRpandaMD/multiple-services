@@ -21,10 +21,11 @@ namespace StoreCheckInService
             if (File.Exists(fileLocation))
             {
                 XDocument doc = XDocument.Load(fileLocation);
-                XElement newStore = doc.Element("store");
-                newStore.Add(new XElement("StoreName", store.storeName),
+                XElement newStore = doc.Element("Stores");
+                newStore.Add(new XElement("Store",
+                             new XElement("StoreName", store.storeName),
                              new XElement("StoreLocation", store.storeLocation),
-                             new XElement("HasCheckedIn", store.hasCheckedIn.ToString()));
+                             new XElement("HasCheckedIn", store.hasCheckedIn.ToString())));
                 doc.Save(fileLocation);
                  
             }

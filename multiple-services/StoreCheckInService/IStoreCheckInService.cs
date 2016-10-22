@@ -15,10 +15,8 @@ namespace StoreCheckInService
         [OperationContract]
         void CheckInToStore(string name, string location);
 
-
+        [OperationContract]
+        List<string> getListofStores();
 
     }
-
-
-   
 }

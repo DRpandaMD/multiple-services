@@ -1,1 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Stores><Store><StoreName>Macys</StoreName><StoreLocation>NewYork</StoreLocation><HasCheckedIn>True</HasCheckedIn></Store></Stores>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Stores>
+  <Store>
+    <StoreName>CoffeStore1</StoreName>
+    <StoreLocation>Tempe, AZ</StoreLocation>
+    <HasCheckedIn>True</HasCheckedIn>
+  </Store>
+  <Store>
+    <StoreName>Flower Shoppe</StoreName>
+    <StoreLocation>Tempe, AZ</StoreLocation>
+    <HasCheckedIn>True</HasCheckedIn>
+  </Store>
+</Stores>
