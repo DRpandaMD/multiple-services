@@ -33,7 +33,7 @@ namespace StoreCheckInService
             List<Stores> storeStructListing = xmlParser.getVisitedStoreListing();
             List<string> storeList = new List<string>();
             
-            for(int i = 0; i != storeList.Count; i++)
+            for(int i = 0; i != storeStructListing.Count; i++)
             {
                 storeList.Add(storeStructListing[i].toString());
             }

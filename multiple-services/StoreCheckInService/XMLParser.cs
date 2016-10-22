@@ -18,12 +18,8 @@ namespace StoreCheckInService
         }
 
         public List<Stores> getVisitedStoreListing()
-        {
-
-
-            XmlNodeList nodeList;
-            XmlNode root = doc.DocumentElement;
-            nodeList = root.SelectNodes("Store");
+        { 
+            XmlNodeList nodeList = doc.DocumentElement.SelectNodes("//Stores/Store");
 
             List<Stores> storeList = new List<Stores>();
             foreach(XmlNode store in nodeList)
@@ -31,8 +27,8 @@ namespace StoreCheckInService
                 Stores aStore = new Stores();
                 if(store.ChildNodes != null)
                 {
-                    aStore.storeName = "<b>" + store.SelectNodes("StoreName").ToString() + "</b>";
-                    aStore.storeLocation = store.SelectNodes("StoreLocation").ToString();
+                    aStore.storeName = "<b>" + store.SelectSingleNode("StoreName").InnerText + "</b>";
+                    aStore.storeLocation = store.SelectSingleNode("StoreLocation").InnerText;
                 }
                 storeList.Add(aStore);
             }

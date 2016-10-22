@@ -10,4 +10,9 @@
     <StoreLocation>Tempe, AZ</StoreLocation>
     <HasCheckedIn>True</HasCheckedIn>
   </Store>
+  <Store>
+    <StoreName>BurgerKing</StoreName>
+    <StoreLocation>09090</StoreLocation>
+    <HasCheckedIn>True</HasCheckedIn>
+  </Store>
 </Stores>
