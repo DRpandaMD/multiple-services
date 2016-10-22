@@ -29,10 +29,10 @@ namespace StoreCheckInService
             foreach(XmlNode store in nodeList)
             {
                 Stores aStore = new Stores();
-                if(store.Attributes != null)
+                if(store.ChildNodes != null)
                 {
-                    aStore.storeName = "<b>" + store.Attributes["StoreName"].Value + "</b>";
-                    aStore.storeLocation = store.Attributes["StoreLocation"].Value;
+                    aStore.storeName = "<b>" + store.SelectNodes("StoreName").ToString() + "</b>";
+                    aStore.storeLocation = store.SelectNodes("StoreLocation").ToString();
                 }
                 storeList.Add(aStore);
             }
