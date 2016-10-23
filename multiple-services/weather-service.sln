@@ -35,6 +35,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite1(1)", "WebSite1\", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreCheckInService", "StoreCheckInService\StoreCheckInService.csproj", "{DA58472F-B93A-4BB5-A151-FB8B32D20DD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreRatingService", "StoreRatingService\StoreRatingService.csproj", "{2C925F29-99FD-4C15-97C1-8634328A715C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{DA58472F-B93A-4BB5-A151-FB8B32D20DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA58472F-B93A-4BB5-A151-FB8B32D20DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA58472F-B93A-4BB5-A151-FB8B32D20DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C925F29-99FD-4C15-97C1-8634328A715C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C925F29-99FD-4C15-97C1-8634328A715C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C925F29-99FD-4C15-97C1-8634328A715C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C925F29-99FD-4C15-97C1-8634328A715C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
