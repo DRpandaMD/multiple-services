@@ -51,5 +51,49 @@
         The top 5 stores are:   
         <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
     </p>
+
+    <h4>Store Check-In Service </h4>
+    <p>
+        This serivce takes in a Store Name and its Location eg (Tempe, AZ or zipcode)<br />
+        WSDL URL: http://localhost:61373/_StoreCheckInService.svc?wsdl
+    </p>
+    <p>
+        Keep track of which stores you've visted by checking in: <br />
+        Store Name: <asp:TextBox ID="StoreNameCheckInTextBox" runat="server"></asp:TextBox><br />
+        Store Location: 
+        <asp:TextBox ID="StoreLocationCheckInTextBox" runat="server"></asp:TextBox>
+        <br />
+        <asp:Button ID="CheckInButton" runat="server" Text="CheckIn" OnClick="CheckInButton_Click" /><br />
+        <br />
+        Lets see where you have been!!   
+
+
+        <asp:Button ID="ListStoresButton" runat="server" Text="List Stores" OnClick="ListStoresButton_Click" /><br />
+        <br />
+        Visited Stores are: 
+
+        <asp:Label ID="ListPlacesVisitedLabel" runat="server" Text="Label"></asp:Label>
+
+    </p>
+    <br />
+    <h4>Store Rating Service </h4>
+    <p>
+        This Service takes in a store name and a location and returns the ratings of that store<br />
+        WSDL URL: http://localhost:25413/StoreRatingService.svc?wsdl
+    </p>
+    <p>
+        Enter in a store and location you want to see the rating of:  <br />
+        Store Name:<asp:TextBox ID="StoreNameRatingTextBox" runat="server"></asp:TextBox><br />
+        Store Location:<asp:TextBox ID="StoreLocationRatingTextBox" runat="server"></asp:TextBox>
+        <br />
+        <asp:Button ID="RatingButton" runat="server" Text="GetRating" OnClick="RatingButton_Click" />
+        <br />
+
+    </p>
+    <p>
+        The Store ratings are: 
+        <asp:Label ID="RatingLabel" runat="server" Text=""></asp:Label>
+    </p>
+
     
 </asp:Content>

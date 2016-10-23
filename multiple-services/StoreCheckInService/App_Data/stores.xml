@@ -15,4 +15,9 @@
     <StoreLocation>09090</StoreLocation>
     <HasCheckedIn>True</HasCheckedIn>
   </Store>
+  <Store>
+    <StoreName>McDonald's</StoreName>
+    <StoreLocation>Tempe, AZ</StoreLocation>
+    <HasCheckedIn>True</HasCheckedIn>
+  </Store>
 </Stores>

@@ -48,4 +48,34 @@ public partial class _Default : Page
             Label3.Text += stores[i];
         }
     }
+
+    protected void CheckInButton_Click(object sender, EventArgs e)
+    {
+        StoreCheckInService.StoreCheckInServiceClient storecheckinservice = new StoreCheckInService.StoreCheckInServiceClient();
+        string storeName = StoreNameCheckInTextBox.Text;
+        string location = StoreLocationCheckInTextBox.Text;
+        storecheckinservice.CheckInToStore(storeName, location);
+    }
+
+    protected void ListStoresButton_Click(object sender, EventArgs e)
+    {
+        StoreCheckInService.StoreCheckInServiceClient storecheckinservice = new StoreCheckInService.StoreCheckInServiceClient();
+        string[] places = storecheckinservice.getListofStores();
+        for(int i = 0; i != places.Length; i++)
+        {
+            ListPlacesVisitedLabel.Text += places[i];
+        }
+    }
+
+    protected void RatingButton_Click(object sender, EventArgs e)
+    {
+        StoreRatingService.StoreRatingServiceClient storeRatingService = new StoreRatingService.StoreRatingServiceClient();
+        string storeName = StoreNameRatingTextBox.Text;
+        string storeLocation = StoreLocationRatingTextBox.Text;
+        string[] ratings = storeRatingService.QueryYelpAPI(storeName, storeLocation);
+        for (int i = 0; i != ratings.Length; i++)
+        {
+            RatingLabel.Text += ratings[i];
+        }
+    }
 }
