@@ -25,7 +25,7 @@ public partial class _Default : Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        weatherservice.WeatherServiceClient weatherService = new weatherservice.WeatherServiceClient();
+        WeatherService2.WeatherServiceClient weatherService = new WeatherService2.WeatherServiceClient();
         string zipcode = TextBox1.Text;
         string units = TextBox2.Text;
         string[] forcast = weatherService.getForcast(zipcode, units);
@@ -39,7 +39,7 @@ public partial class _Default : Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        YelpService.StoreLocationServiceClient locationService = new YelpService.StoreLocationServiceClient();
+        YelpService2.StoreLocationServiceClient locationService = new YelpService2.StoreLocationServiceClient();
         string term = TextBox3.Text;
         string location = TextBox4.Text;
         string[] stores = locationService.QueryYelpAPI(term, location);
@@ -51,7 +51,7 @@ public partial class _Default : Page
 
     protected void CheckInButton_Click(object sender, EventArgs e)
     {
-        StoreCheckInService.StoreCheckInServiceClient storecheckinservice = new StoreCheckInService.StoreCheckInServiceClient();
+        StoreCheckInService2.StoreCheckInServiceClient storecheckinservice = new StoreCheckInService2.StoreCheckInServiceClient();
         string storeName = StoreNameCheckInTextBox.Text;
         string location = StoreLocationCheckInTextBox.Text;
         storecheckinservice.CheckInToStore(storeName, location);
@@ -59,7 +59,7 @@ public partial class _Default : Page
 
     protected void ListStoresButton_Click(object sender, EventArgs e)
     {
-        StoreCheckInService.StoreCheckInServiceClient storecheckinservice = new StoreCheckInService.StoreCheckInServiceClient();
+        StoreCheckInService2.StoreCheckInServiceClient storecheckinservice = new StoreCheckInService2.StoreCheckInServiceClient();
         string[] places = storecheckinservice.getListofStores();
         for(int i = 0; i != places.Length; i++)
         {
@@ -69,7 +69,7 @@ public partial class _Default : Page
 
     protected void RatingButton_Click(object sender, EventArgs e)
     {
-        StoreRatingService.StoreRatingServiceClient storeRatingService = new StoreRatingService.StoreRatingServiceClient();
+        StoreRatingService2.StoreRatingServiceClient storeRatingService = new StoreRatingService2.StoreRatingServiceClient();
         string storeName = StoreNameRatingTextBox.Text;
         string storeLocation = StoreLocationRatingTextBox.Text;
         string[] ratings = storeRatingService.QueryYelpAPI(storeName, storeLocation);
