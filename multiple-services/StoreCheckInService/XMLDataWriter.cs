@@ -14,7 +14,7 @@ namespace StoreCheckInService
         
         public void writeToXMLFile(Store store)
         {
-            string fileLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"AppData"); //Remember: for LocalHost its "App_Data", but on the server its a <dir> "AppData"
+            string fileLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data"); //Remember: for LocalHost its "App_Data", but on the server its a <dir> "AppData"
             fileLocation = Path.Combine(fileLocation, "stores.xml");
 
 

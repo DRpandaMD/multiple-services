@@ -26,7 +26,7 @@ namespace StoreCheckInService
 
         public List<string> getListofStores()
         {
-            string fileLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data");
+            string fileLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"AppData");
             fileLocation = Path.Combine(fileLocation, "stores.xml");
 
             XMLParser xmlParser = new XMLParser(fileLocation);
